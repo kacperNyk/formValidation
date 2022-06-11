@@ -1,0 +1,22 @@
+$dark-color: rgb(20, 20, 20);
+$darker-grey: rgb(65, 60, 60);
+$light-grey: rgb(199, 194, 194);
+$light-color: rgb(248, 245, 245);
+$dark-violet: rgb(76, 0, 197);
+$light-violet: rgb(141, 11, 192);
+$input-bg: rgb(233, 233, 233);
+$correct-green: rgb(19, 165, 14);
+$incorrect-red: rgb(228, 17, 17);
+
+// easings
+
+$Bounce: cubic-bezier(0.245, 0.455, 1.000, 1.650);
+$DoubleBounce: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+$EaseInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$EaseInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+
+// transition time
+
+$fast: .15s;
+$normal: .3s;
+$slower: .5s;
