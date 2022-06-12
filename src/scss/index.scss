@@ -9,12 +9,15 @@ body{
     margin: 0;
     padding: 0;
     width: 100vw;
+    position: relative;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 .form__container{
     @include mix.flex($direction: column);
     width: 50vw;
-    height: 90vh;
+    height: fit-content;
+    margin: 1rem 0;
     border-radius: 1rem;
     & * > input{
         @include mix.border-hover(var.$dark-violet);
@@ -37,6 +40,20 @@ body{
         background: transparent;
         border: 1px solid var.$light-grey;
         cursor: pointer;
+    }
+}
+.err__msg__con{
+    @include mix.flex($direction: column);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    border: 1px solid var.$darker-grey;
+    padding: 1rem 5rem;
+    display: none;
+    &.active{
+        display: flex;
     }
 }
 

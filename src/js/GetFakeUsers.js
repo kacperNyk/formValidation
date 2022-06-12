@@ -1,13 +1,15 @@
 const API_URL = "https://randomuser.me/api/";
 export const loginInp = document.getElementById("login");
 export const firstNameInp = document.getElementById("firstName");
-export const lastNameInp = document.getElementById("secondName");
+export const lastNameInp = document.getElementById("lastName");
 export const birthdayInp = document.getElementById("birthday");
 export const emailInp = document.getElementById("email");
 export const phoneInp = document.getElementById("phone");
 export const countryInp = document.getElementById("country");
 export const cityInp = document.getElementById("city");
 export const cityCodeInp = document.getElementById("cityCode");
+export const password = document.getElementById("password");
+export const passwordValidation = document.getElementById("passwordValidation");
 const generateUserBtn = document.getElementById("generateBtn");
 
 function fetchData() {
@@ -31,12 +33,32 @@ async function filterData() {
       },
     },
   } = data;
-  return (
-    email, username, first, last, phone, gender, city, country, date, postcode
-  );
+  return {
+    email,
+    username,
+    first,
+    last,
+    phone,
+    gender,
+    city,
+    country,
+    date,
+    postcode,
+  };
 }
 async function updateForm() {
-  const email = await filterData();
-  console.log(email);
+  const data = await filterData();
+  loginInp.value = data.username;
+  password.value = data.username;
+  passwordValidation.value = data.username;
+  firstNameInp.value = data.first;
+  countryInp.value = data.country;
+  birthdayInp.value = data.date.slice(0, data.date.indexOf("T"));
+  phoneInp.value = data.phone;
+  emailInp.value = data.email;
+  cityInp.value = data.city;
+  cityCodeInp.value = data.postcode;
+  lastNameInp.value = data.last;
 }
-updateForm();
+
+generateUserBtn.addEventListener("click", updateForm);

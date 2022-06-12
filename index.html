@@ -20,40 +20,46 @@
         </nav>
     </header>
     <main class="form__container">
-        <section class="form">
+        <form class="form" action="#" id="form">
             <label for="login">
                 <p class="label__title">Login</p>
-                <input type="text" id="login" placeholder="jack1234!@">
+                <input type="text" id="login" placeholder="jack1234!@" >
             </label>
             <label for="userName">
                 <p class="label__title">Name</p>
-                <input type="text" id="firstName" placeholder="firstName">
-                <input type="text" id="lastName" placeholder="lastName">
+                <input type="text" id="firstName" placeholder="firstName" >
+                <input type="text" id="lastName" class="notRequired" placeholder="lastName">
+            </label>
+            <label for="password">
+                <p class="label__title">password</p>
+                <input type="password" id="password" placeholder="password" >
+                <input type="password" id="passwordValidation" placeholder="password" >
             </label>
             <label for=”birth”>
                 <label for="input">
                     <p class="label__title">Birthday</p>
-                    <input type="text" id="birthday" placeholder="dd.mm.rrrr" onfocus="(this.type='date')">
+                    <input type="text" id="birthday" placeholder="dd.mm.rrrr" onfocus="(this.type='date')" >
                 </label>
             </label>
             <label for="email">
                 <p class="label__title">Email</p>
-                <input type="email" id="email" placeholder="email@email.com">
+                <input type="email" id="email" placeholder="email@email.com" >
             </label>
             
             <label for="phone">
                 <p class="label__title">Phone</p>
-                <input type="tel" id="phone" placeholder="000-000-000">
+                <input type="tel" id="phone" placeholder="000-000-000" >
             </label>
             <label for="address">
                 <p class="label__title">Address</p>
-                <input type="text" id="country" placeholder="United States"> 
-                <input type="text" id="city" class="err" placeholder="New York"> 
-                <input type="text" id="cityCode" placeholder="100-100"> 
+                <input type="text" id="country" placeholder="United States" > 
+                <input type="text" id="city" placeholder="New York" > 
+                <input type="text" id="cityCode" placeholder="100-100" > 
             </label>
-            <button class="btn" id="generateBtn">Generate user</button>
-            <button class="btn" id="submitBtn"type="submit">Submit</button>
-        </section>
+            <button class="btn" id="generateBtn" type="button">Generate user</button>
+            <button class="btn" id="submitBtn" type="submit">Submit</button>
+            <div class="err__msg__con" id="errorMsgCon"></div>
+        </form>
     </main>
 </body>
 </html>
