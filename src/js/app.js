@@ -12,7 +12,6 @@ form.addEventListener("submit", (e) => {
 function validateInputs() {
   const passwordValue = fku.password.value;
   const passwordValidateValue = fku.passwordValidation.value;
-  fku.emailInp.preventDefault();
   const emailValue = fku.emailInp.value;
   //check for all inputs if any is empty
   const allInputsElements = [...document.querySelectorAll("input")];
@@ -52,7 +51,6 @@ function validateInputs() {
   ValidateAge();
 }
 
-
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
@@ -84,7 +82,7 @@ function ValidateAge() {
     return true;
   } else {
     fku.birthdayInp.value = "enter like this DD/MM/YYYY";
-    fku.birthdayInp.classList.add("err")
+    fku.birthdayInp.classList.add("err");
     return false;
   }
 }
