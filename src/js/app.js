@@ -5,7 +5,6 @@ const errMsgCon = document.getElementById("errorMsgCon");
 let errValidateArr = [];
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
   validateInputs();
 });
 
